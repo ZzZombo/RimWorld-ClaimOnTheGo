@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Claim On The Go</name>
+	<author>ZzZombo</author>
+	<supportedVersions>
+		<li>1.1</li>
+		<li>1.2</li>
+	</supportedVersions>
+	<!-- <modDependencies> <li> <packageId>basarab.ror</packageId> <displayName>Religions of Rimworld 2.0</displayName> <downloadUrl>https://github.com/basarab1504/ReligionsOfRimworld-2.0/releases/latest</downloadUrl> <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=1974112020</steamWorkshopUrl> </li> </modDependencies> -->
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+	</loadAfter>
+	<packageId>ZzZombo.ClaimOnTheGo</packageId>
+	<description>Buildings are claimed by nearby enemies automatically. Some buildings are claimed only by enemies (of the building's current faction), some only by the player's faction, and some by both, for example conduits can be claimed by the player only while hoopstones by both. This mod was done mainly to reduce tedium of having to claim stuff while attacking hostile settlements to meaningfully interact with it, so the player by default can claim more things than other factions.</description>
+	<url>https://steamcommunity.com/id/zzzombo6/myworkshopfiles/?appid=294100</url>
+</ModMetaData>

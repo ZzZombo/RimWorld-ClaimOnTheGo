@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[@Name="BenchBase"]/comps</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable" />
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[thingCategories[li="BuildingsJoy" or li="BuildingsSpecial"]]/comps</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable" />
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[thingClass="Building_Sarcophagus" or thingClass="Building_AncientCryptosleepCasket" or thingClass="Building_CryptosleepCasket" or thingClass="Building_OrbitalTradeBeacon" or thingClass="Building_CommsConsole"]/comps</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable" />
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="PodLauncher"]/comps</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable" />
+		</value>
+	</Operation>
+	<!-- Firefoam poppers. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef/comps[li[@Class="CompProperties_ProximityFuse"]/target="Fire"]</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable" />
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef/comps[li[@Class="CompProperties_Facility" or @Class="CompProperties_TerrainPumpDry" or @Class="CompProperties_ScannerMineralsDeep" or @Class="CompProperties_LongRangeMineralScanner" or @Class="CompProperties_ShipPart"]]</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable" />
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[@Name="DoorBase" or @Name="PowerConduit" or thingClass="Building_Door"]/comps[not(li/@Class="ZzZomboRW.CompProperties_Claimable")]</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable">
+				<byEnemies>false</byEnemies>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[thingClass="Building_PowerSwitch" or thingClass="Building_TrapDamager" or thingClass="Building_TrapExplosive" or thingClass="Building_Vent"]/comps</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable">
+				<byEnemies>false</byEnemies>
+			</li>
+		</value>
+	</Operation>
+	<!-- Passive coolers. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef/comps[li[@Class="CompProperties_HeatPusher" and 0>heatPerSecond]]</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable">
+				<byEnemies>false</byEnemies>
+			</li>
+		</value>
+	</Operation>
+	<!-- Generators. `CompProperties_ShipPart` might be already patched, safeguard against that is present. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef/comps[li[@Class="CompProperties_Power" and 0>basePowerConsumption and transmitsPower="true"][not(li/@Class="ZzZomboRW.CompProperties_Claimable")]]</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable">
+				<byEnemies>false</byEnemies>
+			</li>
+		</value>
+	</Operation>
+	<!-- Electric coolers and heaters are covered by `CompProperties_TempControl` here. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef/comps[li[@Class="CompProperties_TempControl" or @Class="CompProperties_Battery"]]</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable">
+				<byEnemies>false</byEnemies>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Sandbags" or defName="Barricade" or defName="Wall" or defName="Column" or defName="Campfire"]/comps</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_Claimable">
+				<byEnemies>false</byEnemies>
+			</li>
+		</value>
+	</Operation>
+</Patch>
